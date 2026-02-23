@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Lockhub</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Lockhub.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/global.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/reusable.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+
+</head>
+<body id="start">
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a asp-page="/Index">
+                    <p class="nav-logo make-this-hover">Lockhub</p>
+                </a>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="list-item make-this-hover"><a asp-page="/Index">Home</a></li>
+                    <li class="list-item make-this-hover nav-item-service">
+                        <a asp-page="/Functions/Index">Functions &#8595;</a>
+                        <ul class="services-on-hover">
+                            <li class="list-item make-this-hover"><a href="">Password storing</a></li>
+                            <li class="list-item make-this-hover"><a href="">Url redirects</a></li>
+                            <li class="list-item make-this-hover"><a href="">Something else</a></li>
+                        </ul>
+                    </li>
+                    <li class="list-item make-this-hover"><a href="">Pricing</a></li>
+                    <li class="list-item make-this-hover"><a href="">About us</a></li>
+                    <li class="list-item make-this-hover nav-divider"></li>
+                    <li class="list-item make-this-hover nav-border"><a asp-page="/Account/Login">Login</a></li>
+                    <li class="list-item make-this-hover nav-border"><a asp-page="/Account/Create-account">Get Started</a></li>
+                </ul>
+            </div>
+            <div class="nav-list-mobile">
+                <img src="/content/mobile-nav.png" alt="">
+            </div>
+            <div class="hidden-mobile-nav">
+                <img src="/content/close.png" alt="">
+                <ul>
+                    <li class="list-item make-this-hover mobile-nav-item"><a href="">Home</a></li>
+                    <li class="list-item make-this-hover nav-item-service mobile-nav-item" onclick="toggleServices(event)">
+                        Services &#8595;
+                        <ul class="mobile-services-on-hover">
+                            <li class="list-item make-this-hover"><a href="" class="service-child-item">Password storing</a></li>
+                            <li class="list-item make-this-hover"><a href="" class="service-child-item">Url redirects</a></li>
+                            <li class="list-item make-this-hover"><a href="" class="service-child-item">Something else</a></li>
+                        </ul>
+                    </li>
+                    <li class="list-item make-this-hover mobile-nav-item"><a href="">Pricing</a></li>
+                    <li class="list-item make-this-hover mobile-nav-item"><a href="">About us</a></li>
+                    <div class="mobile-nav-btn-container">
+                    <li class="list-item make-this-hover nav-border "><a href="" class="mobile-nav-btn-center">Login</a></li>
+                    <li class="list-item make-this-hover nav-border mobile-nav-btn-center"><a href="">Get Started</a></li>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <section class="footer-section">
+            <div class="footer-container">
+                <div class="footer-left-col">
+                    <div class="f-l-identify">
+                        <a href="/index.html">
+                            <h3 class="nav-logo make-this-hover">Lockhub</h3>
+                        </a>
+                        <p>CVR: DKXXXXXXXXXX</p>
+                    </div>
+                    <div class="f-l-info">
+                        <p>Mail: <a href="mailto:contact@lockhub.com">Contact@lockhub.com</a></p>
+                        <p>Phone: <a href="tel:+4512345678">+4512345678</a></p>
+                        <p>Adress: <a href="#">None of ya business</a></p>
+                    </div>
+                    <div>
+                        <p><a href="#start">Back to the top</a></p>
+                    </div>
+                </div>
+                <div class="footer-mid-col">
+                    <h3>Products</h3>
+                    <ul>
+                        <li class="list-item make-this-hover"><a href="#">Features</a></li>
+                        <li class="list-item make-this-hover"><a href="#">Pricing</a></li>
+                        <li class="list-item make-this-hover"><a href="#">Security</a></li>
+                        <li class="list-item make-this-hover"><a href="#">FAQ</a></li>
+                        <li class="list-item make-this-hover"><a href="#">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-right-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li class="list-item make-this-hover"><a href="#">Blog</a></li>
+                        <li class="list-item make-this-hover"><a href="#">Help Center</a></li>
+                        <li class="list-item make-this-hover"><a href="#">API Documentation</a></li>
+                        <li class="list-item make-this-hover"><a href="#">Browser Extension</a></li>
+                        <li class="list-item make-this-hover"><a href="#">Download Apps</a></li>
+                    </ul>
+                </div>
+                <div class="empty"></div>
+                <div class="lowest-row">
+                    <p>© 2026 Lockhub. All rights reserved.</p>
+                </div>
+                <div class="empty"></div>
+            </div>
+        </section>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="/js/navbar-mobile.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

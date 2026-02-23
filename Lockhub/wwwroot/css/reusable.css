@@ -1,0 +1,41 @@
+﻿.button-hover {
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--background-white);
+}
+
+    .button-hover:hover {
+        border: 1px solid transparent;
+    }
+
+    .button-hover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 200%;
+        background-color: var(--orange);
+        transform: translateX(-100%); /* Start off-screen LEFT */
+        transition: transform 0.3s ease-in-out;
+        z-index: -1;
+    }
+
+    .button-hover:hover::before {
+        transform: translateX(0); /* Slide in and stay centered */
+    }
+/*
+.button-hover:hover::before {
+    transform: translateX(0) skew(-0.06turn, 8deg);
+}
+*/
+.make-this-hover {
+    transition: all .2s ease-in-out;
+}
+
+    .make-this-hover:hover {
+        transform: scale(1.05);
+    }

@@ -15,13 +15,13 @@ namespace Lockhub.Services
             _secret = config["Jwt:Secret"];
         }
 
-        public string GenerateToken(int userId, int organisationId, string role)
+        public string GenerateToken(int userId, int organisationId, int role)
         {
             var claims = new[]
             {
                 new Claim("userId", userId.ToString()),
                 new Claim("organisationId", organisationId.ToString()),
-                new Claim("role", role)
+                new Claim("role", role.ToString())
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_secret));

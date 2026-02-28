@@ -1,0 +1,130 @@
+﻿.create-ac-container {
+    width: 50vw;
+    height: fit-content;
+    place-self: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 4rem auto 4rem auto;
+}
+
+.login-card {
+    display: flex;
+    width: 30vw;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 5rem 0 5rem 0;
+    background-color: var(--background-white);
+}
+
+.login-card > form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.login-card > form > div {
+    display: grid;
+}
+
+.login-card > form > div > input, .login-card > form > div > div > input {
+    place-self: center;
+    width: 15vw;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    border: rgb(91, 91, 91);
+    background-color: var(--background-white);
+    padding-left: 1.5rem;
+    outline: none;
+    transition: 0.2s ease;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.login-card > form > div > input:focus, .login-card > form > div > div > input:focus {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.login-card-cta-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card > form > div > button {
+    place-self: center;
+    height: auto;
+    width: 50%;
+    cursor: pointer;
+}
+
+.login-card-cta-container > p {
+    text-align: center
+}
+
+.create-ac-card-name-container-input {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+.name-input-left {
+    width: 45% !important;
+    place-self: end !important;
+}
+
+.name-input-right {
+    width: 45% !important;
+    place-self: start !important;
+}
+
+.login-card-password-container-input {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.password-input-left {
+    width: 45% !important;
+    place-self: end !important;
+}
+
+.password-input-right {
+    width: 45% !important;
+    place-self: start !important;
+}
+
+.validation-span-name-left {
+    width: 45%;
+    place-self: end;
+    text-align: center;
+}
+
+.validation-span-name-right {
+    width: 45%;
+    place-self: start;
+    text-align: center;
+}
+
+.validation-span {
+    text-align: start;
+}
+
+.required-text {
+    color: red;
+}

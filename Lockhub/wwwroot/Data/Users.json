@@ -1,0 +1,26 @@
+[
+  {
+    "UserId": 1,
+    "Firstname": "Admin",
+    "Lastname": "Admin",
+    "Email": "admin@lockhub.com",
+    "HashPassword": "admin123",
+    "Phone": "12345678",
+    "OrganisationId": 1,
+    "RoleId": 1,
+    "BirthDate": "2026-02-28T20:25:12.6078173+01:00",
+    "CreatedAt": "2026-02-28T20:25:12.6078223+01:00"
+  },
+  {
+    "UserId": 2,
+    "Firstname": "Daniel",
+    "Lastname": "N\u00F8rgaard",
+    "Email": "ddnoergaard@gmail.com",
+    "HashPassword": "Mua87zhv",
+    "Phone": null,
+    "OrganisationId": 1,
+    "RoleId": 0,
+    "BirthDate": "0001-01-01T00:00:00",
+    "CreatedAt": "0001-01-01T00:00:00"
+  }
+]

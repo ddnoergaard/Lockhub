@@ -13,7 +13,7 @@ namespace Lockhub.Services
 
         private string JsonFileName
         {
-            get { return Path.Combine(WebHostEnvironment.WebRootPath, "Data", typeof(T) + "s.json"); }
+            get { return Path.Combine(WebHostEnvironment.WebRootPath, "Data", typeof(T).Name + "s.json"); }
         }
 
         public void SaveJsonObjects(List<T> objects)

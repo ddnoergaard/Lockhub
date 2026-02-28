@@ -4,24 +4,42 @@
 }
 
 <main>
-    <div class="login-container">
+    <div class="create-ac-container">
         <div class="login-card">
             <h1>Create Account</h1>
             <form action="" method="post">
-                <div class="login-card-name-container-input">
-                    <input class="name-input-left" placeholder="First name" type="text">
-                    <input class="name-input-right" placeholder="Last name" type="text">
+                <div class="create-ac-card-name-container-input">
+                    <div style="display:grid">
+                        <input asp-for="User.Firstname" class="name-input-left" placeholder="First name" type="text">
+                        <span class="validation-span-name-left required-text" asp-validation-for="User.Firstname"></span>
+                    </div>
+                    <div style="display:grid">
+                        <input asp-for="User.Lastname" class="name-input-right" placeholder="Last name" type="text">
+                        <span class="validation-span-name-right required-text" asp-validation-for="User.Lastname"></span>
+                    </div>
                 </div>
                 <div>
-                    <input placeholder="john@gmail.com" type="text">
+                    <input asp-for="User.Email" placeholder="john@gmail.com" type="text">
+                    <span class="validation-span required-text" asp-validation-for="User.Email"></span>
                 </div>
                 <div class="login-card-password-container-input">
-                    <input class="password-input-left" placeholder="Password" type="password">
-                    <input class="password-input-right" placeholder="Confirm Password" type="password">
+                    <div style="display:grid">
+                        <input asp-for="User.HashPassword" class="password-input-left" placeholder="Password" type="password">
+                        <span class="validation-span-name-left required-text" asp-validation-for="User.HashPassword"></span>
+                    </div>
+                    <div style="display:grid">
+                        <input asp-for="ComparePassword" class="password-input-right" placeholder="Confirm Password" type="password">
+                        <span class="validation-span-name-right required-text" asp-validation-for="ComparePassword"></span>
+                    </div>
+                </div>
+                <div>
+                    <p style="text-align: center;">Birth date</p>
+                    <p style="text-align: center; padding-bottom:1rem">Date/Month/Year</p>
+                    <input asp-for="BirthDayString" placeholder="01/01/2000" type="text"/>
                 </div>
                 <div class="login-card-cta-container">
                     <p class="make-this-hover"><a href="">Forgot password?</a></p>
-                    <button class="make-this-hover nav-border" type="submit">Login</button>
+                    <button class="make-this-hover nav-border" type="submit">Create Account</button>
                     <p class="make-this-hover"><a href="">Already a user?</a></p>
                 </div>
             </form>

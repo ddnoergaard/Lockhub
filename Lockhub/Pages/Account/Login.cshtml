@@ -7,12 +7,13 @@
     <div class="login-container">
         <div class="login-card">
             <h1>Login</h1>
+            <p>@ViewData["failed-to-login"]</p>
             <form method="post">
                 <div>
-                    <input placeholder="john@gmail.com" type="text">
+                    <input asp-for="LoginUser.Email" placeholder="john@gmail.com" type="text">
                 </div>
                 <div>
-                    <input placeholder="*********" type="password">
+                    <input asp-for="LoginUser.HashPassword" placeholder="*********" type="password">
                 </div>
                 <div class="login-card-cta-container">
                     <p class="make-this-hover"><a href="">Forgot password?</a></p>

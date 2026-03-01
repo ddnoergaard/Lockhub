@@ -6,3 +6,11 @@
     --yellow: #F4D35E;
     --background-white: #FFFEF9;
 }
+
+* {
+    --primary: #111f11; /* dark green - icons, buttons, accents */
+    --text: #1a1a1a; /* main text */
+    --bg: #ffffff; /* backgrounds */
+    --subtle: #f4f4f4; /* cards, hover states */
+    --border: #e0e0e0; /* borders, separators */
+}

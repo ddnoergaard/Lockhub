@@ -1,0 +1,104 @@
+﻿@import URL("/css/colors.css");
+@import url('https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+
+* {
+    font-family: "SN Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--text);
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.main-content-container {
+    display: flex;
+    grid-template-columns: 1fr 2fr;
+    width: 100vw;
+    height: auto;
+}
+
+/* NAV */
+
+nav {
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    flex-direction: column;
+    height: 100vh;
+    width: 15%;
+    background-color: var(--bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.nav-logo {
+    font-family: "Knewave", system-ui;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--text);
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+    place-self: center;
+    margin-top: 2rem;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav-separator {
+    border: none;
+    border-top: 2px solid var(--primary);
+    width: 75%;
+    margin: 0 auto;
+}
+
+.nav-li-items > a {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1.5rem;
+    padding-left: 2rem;
+}
+
+.nav-li-image {
+    width: 15%;
+}
+
+.nav-unordered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.make-this-hover {
+    transition: all .2s ease-in-out;
+}
+
+    .make-this-hover:hover {
+        transform: scale(1.05);
+    }
+
+.nav-item-three {
+    margin-bottom: 2rem;
+}
+
+/* MAIN */
+
+main {
+    display: grid;
+    min-height: 100vh;
+    width: 85%;
+    margin-left: 15%;
+}

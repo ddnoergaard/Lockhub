@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Lockhub</title>
+    <script type="importmap"></script>
+    <link href="/css/app-layout.css" rel="stylesheet" />
+</head>
+<body id="start">
+    <section class="main-content-container">
+        <nav>
+            <div class="nav-item-one">
+                <p class="nav-logo">Lockhub</p>
+            </div>
+            <div class="list-container">
+                <div class="nav-item-two">
+                    <ul class="nav-unordered-list">
+                        <li class="nav-li-items make-this-hover"><a href=""><img class="nav-li-image" src="/content/app/house-solid-full.svg" alt="">Home</a></li>
+                        <li class="nav-li-items make-this-hover"><a href=""><img class="nav-li-image" src="/content/app/vault-solid-full.svg" alt="">Vaults</a></li>
+                        <li class="nav-li-items make-this-hover"><a href=""><img class="nav-li-image" src="/content/app/key-solid-full.svg" alt="">Credentials</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item-three">
+                    <ul class="nav-unordered-list">
+                        <hr class="nav-separator">
+                        <li class="nav-li-items make-this-hover"><a href=""><img class="nav-li-image" src="/content/app/user-solid-full.svg" alt="">Profile</a></li>
+                        <li class="nav-li-items make-this-hover"><a href=""><img class="nav-li-image" src="/content/app/gear-solid-full.svg" alt="">Settings</a></li>
+                        <li class="nav-li-items make-this-hover"><a href=""><img class="nav-li-image" src="/content/app/arrow-right-from-bracket-solid-full.svg" alt="">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p style="place-self: center;">© 2026 Lockhub.</p>
+        </nav>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </section>
+    <footer></footer>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

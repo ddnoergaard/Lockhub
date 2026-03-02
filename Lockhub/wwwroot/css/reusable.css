@@ -1,5 +1,7 @@
-﻿.button-hover {
-    border: 1px solid black;
+﻿@import url("/css/colors.css");
+
+.button-hover {
+    border: 1px solid var(--text);
     border-radius: 1rem;
     padding: 0.2rem 0.5rem 0.2rem 0.5rem;
     overflow: hidden;
@@ -9,6 +11,7 @@
 
     .button-hover:hover {
         border: 1px solid transparent;
+        color: var(--text-light) !important;
     }
 
     .button-hover::before {
@@ -18,7 +21,7 @@
         left: 0;
         width: 200%;
         height: 200%;
-        background-color: var(--orange);
+        background-color: var(--primary-lighter);
         transform: translateX(-100%); /* Start off-screen LEFT */
         transition: transform 0.3s ease-in-out;
         z-index: -1;

@@ -21,18 +21,22 @@
     margin-left: 2.5rem;
 }
 
+.light-text {
+    color: var(--text-light) !important;
+}
+
 .hero-s-left-desc-container {
     display: grid;
     gap: 1rem;
 }
 
-    .hero-s-left-desc-container > ul {
-        margin: auto -2rem auto 2rem;
-    }
+.hero-s-left-desc-container > ul {
+    margin: auto -2rem auto 2rem;
+}
 
-        .hero-s-left-desc-container > ul > li {
-            list-style: circle
-        }
+.hero-s-left-desc-container > ul > li {
+    list-style: circle
+}
 
 .hero-s-left-cta-container {
     display: flex;
@@ -69,7 +73,7 @@
 .features-section {
     width: 100%;
     height: auto;
-    background-color: var(--background-white);
+    background-color: var(--bg-change);
     padding: 5rem 0 5rem 0;
 }
 
@@ -121,7 +125,7 @@
     align-items: center;
     gap: 1rem;
     width: auto;
-    border: 1px solid var(--off-white-yellow);
+    border: 1px solid var(--border);
     min-height: 15.5rem;
     padding: 2rem;
     border-radius: 1rem;
@@ -131,7 +135,7 @@
 
     .feature-cards:hover {
         border: transparent;
-        box-shadow: var(--orange) 0px 5px 15px;
+        box-shadow: var(--primary-lighter) 0px 5px 15px;
     }
 
     .feature-cards > img {
@@ -145,7 +149,7 @@
 .pricing-section {
     width: 100%;
     height: auto;
-    background-color: var(--off-white-yellow);
+    background-color: var(--bg);
     padding: 5rem 0 5rem 0;
 }
 
@@ -174,17 +178,18 @@
 {
     text-align: center;
     padding-bottom: 1rem;
-    border-bottom: 1px solid var(--orange);
+    border-bottom: 1px solid var(--border);
 }
 
 }
 
 .free-tier-card > h3 {
-    border-bottom: 1px solid var(--orange);
+    border-bottom: 1px solid var(--border);
 }
 
 .pricing-card-features-container {
-    border: 1px solid var(--orange);
+    border: 1px solid var(--border);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 2rem;
     padding: 2rem;
 }
@@ -207,7 +212,7 @@
 
 .free-tier-card {
     display: flex;
-    background-color: var(--background-white);
+    background-color: var(--subtle);
     border-radius: 2rem;
     flex-direction: column;
     align-items: center;

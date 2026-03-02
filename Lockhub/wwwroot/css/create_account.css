@@ -19,7 +19,7 @@
     border: 1px solid white;
     border-radius: 1rem;
     padding: 5rem 0 5rem 0;
-    background-color: var(--background-white);
+    background-color: var(--bg-change);
 }
 
 .login-card > form {
@@ -41,7 +41,7 @@
     height: 2.5rem;
     border-radius: 0.5rem;
     border: rgb(91, 91, 91);
-    background-color: var(--background-white);
+    background-color: var(--bg);
     padding-left: 1.5rem;
     outline: none;
     transition: 0.2s ease;
@@ -64,6 +64,10 @@
     height: auto;
     width: 50%;
     cursor: pointer;
+}
+
+.submit-light-text:hover {
+    color: var(--text-light) !important;
 }
 
 .login-card-cta-container > p {

@@ -9,8 +9,11 @@
 
 * {
     --primary: #111f11; /* dark green - icons, buttons, accents */
+    --primary-lighter: #162916;
     --text: #1a1a1a; /* main text */
+    --text-light: #f0f0f0; /*Light text*/
     --bg: #ffffff; /* backgrounds */
+    --bg-change: #f0f4f0; 
     --subtle: #f4f4f4; /* cards, hover states */
     --border: #e0e0e0; /* borders, separators */
 }

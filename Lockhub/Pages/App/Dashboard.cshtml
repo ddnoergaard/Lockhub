@@ -4,4 +4,71 @@
     Layout = "_AppLayout";
 }
 
-<h1>@Model.CurrentUser.Firstname</h1>
+<div class="main-section">
+    <div class="home-first-container">
+        <div>
+            <div class="home-header-container">
+                <h1>Goodmorning, Daniel</h1>
+            </div>
+            <div class="state-container">
+                <img class="circle-states" src="/content/app/states/circle_green.svg" alt="">
+                <p class="state-text">Status: Your Passwords are safe</p>
+            </div>
+        </div>
+        <div class="home-header-cta-container">
+            <button class="cta-btn">Add new login</button>
+            <button class="cta-btn">Generate Password</button>
+        </div>
+    </div>
+    <div class="home-second-container">
+        <div class="overview-card">
+            <p class="home-overview-card-header">Stored Passwords</p>
+            <p class="home-overview-card-info">27</p>
+        </div>
+        <div class="overview-card">
+            <p class="home-overview-card-header">Vaults access to</p>
+            <p class="home-overview-card-info">3</p>
+        </div>
+        <div class="overview-card">
+            <div class="overview-card-state-container">
+                <img class="circle-states" src="/content/app/states/circle_yellow.svg" alt="">
+                <p class="home-overview-card-header">Weak passwords</p>
+            </div>
+            <p class="home-overview-card-info">3</p>
+        </div>
+        <div class="overview-card">
+            <p class="home-overview-card-header">Last login</p>
+            <p class="home-overview-card-info">02/02/2026</p>
+        </div>
+    </div>
+    <div class="home-third-container">
+        <div class="third-head">
+            <p>General Password Strength</p>
+        </div>
+        <div class="third-body">
+            <p>%%</p>
+        </div>
+    </div>
+    <div class="home-fourth-container">
+        <div class="fourth-left">
+            <p>Last 5 credentials used</p>
+            <table class="credentials-table">
+                <thead>
+                    <tr class="table-row-field">
+                        <th class="table-data-field">Name</th>
+                        <th class="table-data-field">username</th>
+                        <th class="table-data-field">url</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>samplename</td>
+                        <td>sampeusername</td>
+                        <td>https://datafeedwatch.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="div-border-child fourth-right"></div>
+    </div>
+</div>

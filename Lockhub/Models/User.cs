@@ -22,6 +22,8 @@ namespace Lockhub.Models
         public int RoleId { get; set; } //FK to RoleId
         public DateTime BirthDate { get; set; }
         public DateTime CreatedAt { get; set; }
+        public DateTime LastLogin { get; set; }
+        public DateTime CurrentLogin { get; set; }
 
         public User()
         {

@@ -1,6 +1,6 @@
 using Lockhub.Models;
 using Lockhub.Repositories.Interfaces;
-using Lockhub.Services;
+using Lockhub.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 

@@ -10,5 +10,6 @@ namespace Lockhub.Repositories.Interfaces
         void AddUser(User user);
         void RemoveUser(string email);
         void UpdateUser(User user);
+        void UpdateUserLastLoginProp(int id);
     }
 }

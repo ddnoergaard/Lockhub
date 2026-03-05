@@ -101,5 +101,16 @@ namespace Lockhub.Repositories
             }
             _jsonService.SaveJsonObjects(_users);
         }
+
+        public void UpdateUserLastLoginProp(int id)
+        {
+            User user = _users.FirstOrDefault(u => u.UserId == id);
+
+            user.LastLogin = user.CurrentLogin;
+
+            user.CurrentLogin = DateTime.Now;
+
+            _jsonService.SaveJsonObjects(_users);
+        }
     }
 }

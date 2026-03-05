@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Lockhub.Repositories.Interfaces;
+using Lockhub.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,9 +14,22 @@ var config = builder.Configuration;
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+//Generic JsonFileReader and Writer
+builder.Services.AddTransient<JsonFileService<Credential>>();
+builder.Services.AddTransient<JsonFileService<Organisation>>();
+builder.Services.AddTransient<JsonFileService<Permissions>>();
+builder.Services.AddTransient<JsonFileService<Role>>();
+builder.Services.AddTransient<JsonFileService<Subscription>>();
 builder.Services.AddTransient<JsonFileService<User>>();
+builder.Services.AddTransient<JsonFileService<Vault>>();
+//Services
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ICredentialService, CredentialService>();
+//Repo
 builder.Services.AddScoped<IUserRepo, UserRepo>();
+builder.Services.AddScoped<ICredentialRepo, CredentialRepo>();
+builder.Services.AddScoped<IVaultRepo, VaultRepo>();
+//JWT Service
 builder.Services.AddScoped<JwtService>();
 //JWT Configuration -> Help from Claude
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

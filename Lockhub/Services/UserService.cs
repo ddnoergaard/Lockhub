@@ -1,6 +1,7 @@
 ﻿using Lockhub.Models;
 using Lockhub.Repositories;
 using Lockhub.Repositories.Interfaces;
+using Lockhub.Services.Interfaces;
 using System.Diagnostics.Eventing.Reader;
 using System.Reflection.Metadata.Ecma335;
 
@@ -33,6 +34,7 @@ namespace Lockhub.Services
                         Secure = true,
                         Expires = DateTime.UtcNow.AddHours(8)
                     });
+                    _userRepo.UpdateUserLastLoginProp(tempUser.UserId);
                     return true;
                 } else
                 {
@@ -74,6 +76,5 @@ namespace Lockhub.Services
             }
             return newId;
         }
-
     }
 }

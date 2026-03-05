@@ -1,6 +1,6 @@
 ﻿using Lockhub.Models;
 
-namespace Lockhub.Services
+namespace Lockhub.Services.Interfaces
 {
     public interface IUserService
     {

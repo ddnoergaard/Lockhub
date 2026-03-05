@@ -8,7 +8,7 @@
     <div class="home-first-container">
         <div>
             <div class="home-header-container">
-                <h1>Goodmorning, Daniel</h1>
+                <h1>@Model.TimeOfDayMessage, @Model.CurrentUser.Firstname</h1>
             </div>
             <div class="state-container">
                 <img class="circle-states" src="/content/app/states/circle_green.svg" alt="">
@@ -38,7 +38,7 @@
         </div>
         <div class="overview-card">
             <p class="home-overview-card-header">Last login</p>
-            <p class="home-overview-card-info">02/02/2026</p>
+            <p class="home-overview-card-info">@Model.CurrentUser.LastLogin.ToString("dd/MM/yyyy")</p>
         </div>
     </div>
     <div class="home-third-container">

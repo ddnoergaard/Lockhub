@@ -16,25 +16,28 @@
             </div>
         </div>
         <div class="home-header-cta-container">
-            <button class="cta-btn">Add new login</button>
+            <form method="post" asp-page-handler="CreateCredential">
+                <button class="cta-btn">Add new login</button>
+            </form>
+            <form method="post" asp-page-handler="GeneratePassword"></form>
             <button class="cta-btn">Generate Password</button>
         </div>
     </div>
     <div class="home-second-container">
         <div class="overview-card">
-            <p class="home-overview-card-header">Stored Passwords</p>
-            <p class="home-overview-card-info">27</p>
+            <p class="home-overview-card-header">Credentials access to</p>
+            <p class="home-overview-card-info">@Model.CredentialCount</p>
         </div>
         <div class="overview-card">
             <p class="home-overview-card-header">Vaults access to</p>
-            <p class="home-overview-card-info">3</p>
+            <p class="home-overview-card-info">@Model.VaultCount</p>
         </div>
         <div class="overview-card">
             <div class="overview-card-state-container">
                 <img class="circle-states" src="/content/app/states/circle_yellow.svg" alt="">
                 <p class="home-overview-card-header">Weak passwords</p>
             </div>
-            <p class="home-overview-card-info">3</p>
+            <p class="home-overview-card-info">@Model.WeakPasswordCount</p>
         </div>
         <div class="overview-card">
             <p class="home-overview-card-header">Last login</p>

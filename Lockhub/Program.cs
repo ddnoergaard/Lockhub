@@ -25,6 +25,7 @@ builder.Services.AddTransient<JsonFileService<Vault>>();
 //Services
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ICredentialService, CredentialService>();
+builder.Services.AddScoped<IVaultService, VaultService>();
 //Repo
 builder.Services.AddScoped<IUserRepo, UserRepo>();
 builder.Services.AddScoped<ICredentialRepo, CredentialRepo>();

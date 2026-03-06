@@ -10,6 +10,6 @@ namespace Lockhub.Services.Interfaces
         IEnumerable<Credential> GetCredentialByUrl(string url, User user);
         Dictionary<int, List<Credential>> GetAllCredentialsWhereUserHasAuthVaultSeparated(User user);
         void MoveCredentialToVault(Credential credential, Vault vault, User user);
-
+        int GetCountOfWeakPasswords(User user);
     }
 }

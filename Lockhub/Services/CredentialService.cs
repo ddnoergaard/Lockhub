@@ -40,6 +40,32 @@ namespace Lockhub.Services
             return returnList;
         }
 
+        public bool IdentifyWeakPassword(string inputPassword)
+        {
+            List<string> commonWords = new List<string> { "password", "pass", "pwd", "welcome", "hello", "login", "admin", "user", "guest", "root", "iloveyou", "letmein", "monkey", "dragon", "master", "football", "soccer", "baseball", "liverpool", "chelsea", "arsenal", "batman", "superman", "qwerty", "qwert", "12345678" };
+            if (commonWords.Contains(inputPassword) || commonWords.Contains(inputPassword.ToLower()) || !inputPassword.Any(c => char.IsUpper(c)) || !inputPassword.Any(c => char.IsDigit(c)) || inputPassword.Length < 8)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public int GetCountOfWeakPasswords(User user)
+        {
+            _credentials = GetAllCredentialsWhereUserHasAuth(user).ToList();
+
+            int returnInt = 0;
+
+            foreach (Credential c in _credentials)
+            {
+                if (IdentifyWeakPassword(c.Password))
+                {
+                    returnInt++;
+                } 
+            }
+            return returnInt;
+        }
+
         public Credential GetCredentialById(int id, User user)
         {
             List<Credential> tempList = GetAllCredentialsWhereUserHasAuth(user).ToList();

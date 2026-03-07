@@ -25,7 +25,6 @@ namespace Lockhub.Pages.Account
 
         public async Task<IActionResult> OnPostAsync()
         {
-            LoginUser = await _userRepo.GetUserByEmail(LoginUser.Email);
             bool success = await _userService.LoginAsync(LoginUser, Response);
             if (success)
             {

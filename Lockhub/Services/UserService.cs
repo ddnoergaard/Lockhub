@@ -26,7 +26,8 @@ namespace Lockhub.Services
                 tempUser = await _userRepo.GetUserByEmail(user.Email);
                 if (tempUser.Email == user.Email && tempUser.HashPassword == user.HashPassword)
                 {
-                    var token = _jwtService.GenerateToken(user.UserId, user.OrganisationId, user.RoleId);
+
+                    var token = _jwtService.GenerateToken(tempUser.UserId, tempUser.OrganisationId, tempUser.RoleId);
 
                     response.Cookies.Append("jwt", token, new CookieOptions
                     {
